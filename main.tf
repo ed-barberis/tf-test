@@ -38,6 +38,16 @@ resource "aws_instance" "tc_instance" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "TC-triggered-instance"
+    Name  = "TC-triggered-instance"
+    Owner = "Ed Barberis"
+  }
+}
+
+resource "aws_iam_user" "test_user_99" {
+  name = "test-user-99"
+
+  tags = {
+    Name  = "test-user-99"
+    Owner = "Ed Barberis"
   }
 }
